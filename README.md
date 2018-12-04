@@ -1,46 +1,48 @@
 # pythonian-badge
 ISAT 348 Pythonian Badge
 
-This program takes an empty list and populates it with a bunch of random numbers using a random list function.
-# def randomlist(templist):
-#    for i in range(10):
-#        x = random.randint(0,101)
-#        templist.append(x)
-#    return templist
+This program takes an empty list and populates it with a bunch of random numbers using a random list function:
+
+def randomlist(templist):
+    for i in range(10):
+        x = random.randint(0,101)
+        templist.append(x)
+    return templist
 
 
-The list is then written to a file that is either created or written to if it has already been created. When the list is written to a file it is written in strings so to do calculations with these numbers you have to convert them to ints.
 
-# randomNum = re.findall(r"[-+]?\d*\.\d+|\d+", infile)
-# randomNum  = list(map(int, randomNum))
+The list is then written to a file that is either created or written to if it has already been created. When the list is written to a file it is written in strings so to do calculations with these numbers you have to convert them to ints:
 
-To see if these numbers were ints I used various functions to do calculations on the list
+randomNum = re.findall(r"[-+]?\d*\.\d+|\d+", infile)
+randomNum  = list(map(int, randomNum))
 
-## def Max(templist):
-##     Max = max(templist)
-##     return Max
-## def Min(templist):
-##     Min = min(templist)
-##     return Min
-## def Median(templist):
-##     Median = statistics.median(templist)
-##     return Median
-## def Average(templist):
-##     Average = statistics.mean(templist)
-##     return Average
-## def Std_Dev(templist):
-##     Std_Dev = statistics.stdev(templist)
-##     return Std_Dev
+To see if these numbers were ints I used various functions to do calculations on the list:
 
-I then displayed them using pyplot and pumpy and followed a template to make the list a bar graph
+def Max(templist):
+    Max = max(templist)
+    return Max
+def Min(templist):
+    Min = min(templist)
+    return Min
+def Median(templist):
+    Median = statistics.median(templist)
+    return Median
+def Average(templist):
+    Average = statistics.mean(templist)
+    return Average
+def Std_Dev(templist):
+    Std_Dev = statistics.stdev(templist)
+    return Std_Dev
 
-## objects = ['Max', 'Min', 'Mean', 'Median', 'Standard Deviation']
-## height = np.arange(len(objects))
-## x_coord = [Max(randomNum), Min(randomNum), Average(randomNum), Median(randomNum),
-## Std_Dev(randomNum)]
-## plt.bar(height, x_coord, width = .8, color = ['blue
-##                                               '])
-## plt.ylabel('List of Random Numbers')
-## plt.xticks(height, objects)
-## plt.title('Numbers')
-## plt.show()
+I then displayed them using pyplot and pumpy and followed a template to make the list a bar graph:
+
+objects = ['Max', 'Min', 'Mean', 'Median', 'Standard Deviation']
+height = np.arange(len(objects))
+x_coord = [Max(randomNum), Min(randomNum), Average(randomNum), Median(randomNum),
+Std_Dev(randomNum)]
+plt.bar(height, x_coord, width = .8, color = ['blue
+                                              '])
+plt.ylabel('List of Random Numbers')
+plt.xticks(height, objects)
+plt.title('Numbers')
+plt.show()
